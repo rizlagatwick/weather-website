@@ -6,6 +6,8 @@ const forecast = require("./utils/forecast");
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
 
@@ -78,6 +80,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server started");
+app.listen(port, () => {
+  console.log("Server started on port: " + port);
 });
