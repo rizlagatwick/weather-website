@@ -16,7 +16,11 @@ const forecast = (long, lat, callback) => {
           " Temp is " +
           body.currently.temperature +
           " Rain likely: " +
-          body.currently.precipProbability
+          body.currently.precipProbability +
+          "High: " +
+          body.daily.data[0].temperatureHigh +
+          "Low: " +
+          body.daily.data[0].temperatureLow
       );
     }
   });
